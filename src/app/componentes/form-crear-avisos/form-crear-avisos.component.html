@@ -1,0 +1,42 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Titulo</ion-card-title>
+
+      <ion-item>
+        <ion-input 
+          required="required"   
+          placeholder="Mascota perdida" 
+          minlength="5"
+          errorText="el titulo debe tener minimo 5 caracteres" 
+          [(ngModel)]="formStr" type="string"
+          #formCita="ngModel">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input 
+          required="required" 
+          label = "Descripcion" 
+          labelPlacement="stacked"
+          placeholder="ingrese descripcion" 
+          minlength="20"
+          errorText="La descripcion debe tener minimo 20 caracteres" 
+          [(ngModel)]="descStr" type="string"
+          #formCita="ngModel">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-button (click)="tomarFoto()">Subir Foto</ion-button>
+        <ion-img></ion-img>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-button [disabled]="!formCita.valid" (click)="crearAnuncio()" slot="start" fill="outline">Agregar
+          Cita</ion-button>
+      </ion-item>
+
+  </ion-card-header>
+
+</ion-card>
