@@ -1,8 +1,11 @@
 <ion-card color="medium">
 
   <ion-list>
-    <ion-item>
-      <ion-label>{{ListaAnuncios}}</ion-label>
+    <ion-item *ngFor="let av of anuncios">
+      <ion-label>
+        <strong>{{ av.titulo }}</strong>
+        <p>{{ av.descripcion }}</p>
+      </ion-label>
     </ion-item>
   </ion-list>
 

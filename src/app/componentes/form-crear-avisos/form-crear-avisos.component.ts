@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { IonCardHeader, IonCardTitle, IonInput, IonButton, IonItem, IonCard, IonImg } from "@ionic/angular/standalone";
 import { FormsModule } from '@angular/forms';
-
+import { ManejoAnunciosService } from '../../servicios/manejo-anuncios.service'
 
 @Component({
   selector: 'app-form-crear-avisos',
@@ -11,15 +11,20 @@ import { FormsModule } from '@angular/forms';
   imports: [IonImg, FormsModule,IonCardHeader, IonCardTitle, IonInput, IonButton, IonItem, IonCard]
 })
 export class FormCrearAvisosComponent  implements OnInit {
-  formStr: String = "";
-  descStr: any;
+  tituloStr:string = "";
+  descripcionStr:string = "";
   
-  constructor() { }
+
+  // Evento para emitir el mensaje al componente padre
+  @Output() DatosDelNuevoAviso = new EventEmitter<string>();
+
+  constructor( private manejoAnunciosService: ManejoAnunciosService ) { }
   
   ngOnInit() {}
-  
+
+  // funcion que tomara los datos del formulario y los pasara al componente padre (crear-avisos.page)
   crearAnuncio() {
-    throw new Error('Method not implemented.');
+    const datos = this.manejoAnunciosService.agregarAviso(this.tituloStr, this.descripcionStr);
   }
   
   tomarFoto() {

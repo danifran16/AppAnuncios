@@ -2,13 +2,17 @@
   <ion-card-header>
     <ion-card-title>Titulo</ion-card-title>
 
+
+    <form (click)="crearAnuncio()">
+
+
       <ion-item>
         <ion-input 
           required="required"   
           placeholder="Mascota perdida" 
           minlength="5"
           errorText="el titulo debe tener minimo 5 caracteres" 
-          [(ngModel)]="formStr" type="string"
+          [(ngModel)]="tituloStr" type="string"
           #formCita="ngModel">
         </ion-input>
       </ion-item>
@@ -21,22 +25,28 @@
           placeholder="ingrese descripcion" 
           minlength="20"
           errorText="La descripcion debe tener minimo 20 caracteres" 
-          [(ngModel)]="descStr" type="string"
+          [(ngModel)]="descripcionStr" type="string"
           #formCita="ngModel">
         </ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-button (click)="tomarFoto()">Subir Foto</ion-button>
+        <ion-button type="submit" (click)="tomarFoto()">Subir Foto</ion-button>
         <ion-img></ion-img>
       </ion-item>
-
-
+      
+      <!-- Con el evento click, necesito enviar esta info emitida a traves de un evento click hacia el componente padre, por lo que este corresponde al hijo y se ocupara un @output en el TS -->
       <ion-item>
-        <ion-button [disabled]="!formCita.valid" (click)="crearAnuncio()" slot="start" fill="outline">Agregar
-          Cita</ion-button>
-      </ion-item>
-
-  </ion-card-header>
-
-</ion-card>
+        <ion-button  slot="start" fill="outline">Agregar
+          Aviso</ion-button>
+        </ion-item>
+    
+    
+      </form>
+    
+    
+    
+    
+    </ion-card-header>
+      
+    </ion-card>
