@@ -1,5 +1,5 @@
 import { Component,OnInit, Input } from '@angular/core';
-import { IonList, IonCard, IonLabel, IonItem } from "@ionic/angular/standalone";
+import { IonImg, IonList, IonCard, IonLabel, IonItem } from "@ionic/angular/standalone";
 import { Formulario } from '../../clases/formulario'
 import { CommonModule } from '@angular/common';
 
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './obtener-avisos.component.html',
   styleUrls: ['./obtener-avisos.component.scss'],
   standalone: true,
-  imports: [ CommonModule, IonList, IonCard, IonLabel, IonItem]
+  imports: [IonImg, CommonModule, IonList, IonCard, IonLabel, IonItem]
 })
 export class ObtenerAvisosComponent implements OnInit {
 
@@ -18,6 +18,10 @@ export class ObtenerAvisosComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    
+
+
   }
 
 }

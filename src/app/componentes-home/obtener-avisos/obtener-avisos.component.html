@@ -5,6 +5,8 @@
       <ion-label>
         <strong>{{ av.titulo }}</strong>
         <p>{{ av.descripcion }}</p>
+        <ion-img 
+          [src]="'data:image/jpeg;base64,'+ av.foto"/>
       </ion-label>
     </ion-item>
   </ion-list>
