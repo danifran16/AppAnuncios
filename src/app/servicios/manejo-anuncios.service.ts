@@ -13,8 +13,8 @@ export class ManejoAnunciosService {
 
   constructor() { }
 
-  agregarAviso(titulo:string, descripcion:string, foto:string) {
-    const nuevoAviso = new Formulario(titulo,descripcion,foto)
+  agregarAviso(titulo:string, descripcion:string, foto:string, fecha:string) {
+    const nuevoAviso = new Formulario(titulo,descripcion,foto,fecha)
     this._form.push(nuevoAviso);
   }
 

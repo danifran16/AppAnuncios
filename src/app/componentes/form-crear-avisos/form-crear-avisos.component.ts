@@ -16,6 +16,8 @@ export class FormCrearAvisosComponent  implements OnInit {
   tituloStr:string = "";
   descripcionStr:string = "";
   fotoAnuncioStr:string = "";
+  fechaCreacionAnuncioStr:string = new Date().toLocaleString();
+
 
   // Evento para emitir el mensaje al componente padre
   @Output() DatosDelNuevoAviso = new EventEmitter<string>();
@@ -26,11 +28,12 @@ export class FormCrearAvisosComponent  implements OnInit {
 
   // funcion que tomara los datos del formulario y los pasara al componente padre (crear-avisos.page)
   crearAnuncio() {
-    this.manejoAnunciosService.agregarAviso(this.tituloStr, this.descripcionStr, this.fotoAnuncioStr);
+    this.manejoAnunciosService.agregarAviso(this.tituloStr, this.descripcionStr, this.fotoAnuncioStr, this.fechaCreacionAnuncioStr);
   
     this.tituloStr = "";
     this.descripcionStr = "";
     this.fotoAnuncioStr = "";
+    this.fechaCreacionAnuncioStr;
   }
   
 
