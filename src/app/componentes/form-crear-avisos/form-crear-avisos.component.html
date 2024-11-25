@@ -2,7 +2,7 @@
   <ion-card-header>
     <ion-card-title>Titulo</ion-card-title>
 
-    <ion-item>
+    <ion-item lines="none">
       <ion-input
         required="required"
         placeholder="Mascota perdida"
@@ -15,7 +15,7 @@
       </ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item lines="none">
       <ion-input
         required="required"
         label="Descripcion"
@@ -37,8 +37,8 @@
       </div>  
     </ion-item>
 
-    <!-- Con el evento click, necesito enviar esta info emitida a traves de un evento click hacia el componente padre, por lo que este corresponde al hijo y se ocupara un @output en el TS -->
-    <ion-item>
+    <!-- Con el evento click, necesito enviar esta info emitida a traves de un evento click hacia el componente padre -->
+    <ion-item lines = "none">
       <ion-button
         (click)="crearAnuncio()"
         [disabled]="!tituloInput.valid || !descripcionInput.valid"

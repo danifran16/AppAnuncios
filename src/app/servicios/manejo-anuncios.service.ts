@@ -8,7 +8,6 @@ export class ManejoAnunciosService {
 
   // Lista privada que contendra los datos que sean ingresados al formulario
   private _form:Formulario[] = [
-    // new Formulario("t1", "d2")//se setea para probar, despues s eborra para que sea dinamica
   ]
 
   constructor() { }
@@ -21,6 +20,4 @@ export class ManejoAnunciosService {
   obtenerAviso():Formulario[]{
     return this._form
   }
-
-
 }

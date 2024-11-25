@@ -5,5 +5,4 @@ export class Formulario {
     public foto:string,
     public fecha:string
   ){}
-
 }

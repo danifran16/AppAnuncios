@@ -17,11 +17,5 @@ export class ObtenerAvisosComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-
-    
-
-
-  }
-
+  ngOnInit() {}
 }

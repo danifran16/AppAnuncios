@@ -26,7 +26,4 @@ export class HomePage  implements OnInit {
   ngOnInit() {
     this.listaAvisos = this.manejoAvisosService.obtenerAviso();
   }
-
-
-
 }
